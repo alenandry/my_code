@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tuo{
+            width: 300px;
+            height: 300px;
+            padding: 1rem;
+            border: 10px solid red;
+        }
+        #zhuai{
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 10px solid blueviolet;
+        }
+    </style>
+    <script type="text/javascript">
+        function allowDrop(ev)
+        {
+        ev.preventDefault();
+        }
+        
+        function drag(ev)
+        {
+        ev.dataTransfer.setData("Text",ev.target.id);
+        document.getElementById("tuo").innerHTML = "开始拖动 p 元素";
+        }
+        
+        function drop(ev)
+        {
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+        document.getElementById("zhuai").innerHTML = "完成 p 元素的拖动。";
+
+        }
+        </script>
+
+</head>
+<body>
+    <div id="tuo" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+    </div>
+    <div id="zhuai" draggable="true" ondragstart="drag(event)">
+
+    </div>
+
+    
+</body>
+</html>

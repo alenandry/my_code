@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head>    
+    <meta charset="UTF-8" name="viewport" content="width=device-width"> 
+       <title>index</title> 
+    <style>
+        .box{
+            margin: 1rem;
+            font-size: large;
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            border: 1rem solid red;
+        }
+        @media screen and (min-width: 500px) and (max-width: 1200px){
+    a{
+        color: purple;
+        font-size: 26px;
+        border: 1rem solid greenyellow;
+
+    }
+}
+
+    </style>                    
+    <div class="box">
+      <a href="other.html" target="_blank">other.html</a>
+    </div> 
+    </head>
+    <body></body>
+    <script>    //演示设置Storage的三种方法    
+    var oLStorage = window.localStorage;     
+    var oSStorage = window.sessionStorage;    
+     oLStorage.setItem("item","ops");   
+     oLStorage.localAge="25";  
+      oLStorage["local"]="name";   
+      oSStorage.setItem("session","name"); 
+        oSStorage.sessionAge="25";   
+      oSStorage["session"]="alen";
+     </script>
+     </html>

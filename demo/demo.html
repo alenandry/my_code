@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .g{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 1rem;
+        }
+        .g div{
+            background-color: darkgrey;
+        }
+        .g div:nth-child(odd){
+            background-color: crimson;
+        }
+        .box4{
+            grid-column: 3;
+            grid-row: 2/4;
+            border: 2px;
+        }
+    </style>
+</head> 
+<body>
+    <div class="g"> 
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus placeat enim quam tempora aperiam, numquam quisquam labore. Dolore, suscipit ad?</div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus placeat enim quam tempora aperiam, numquam quisquam labore. Dolore, suscipit ad?</div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus placeat enim quam tempora aperiam, numquam quisquam labore. Dolore, suscipit ad?</div>
+        <div class="box1">ops 1</div>
+        <div class="box2">ops 2</div>
+        <div class="box3">ops 3</div>
+        <div class="box4">ops 4</div>
+    </div>
+
+    
+</body>
+</html>
